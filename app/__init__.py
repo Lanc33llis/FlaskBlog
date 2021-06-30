@@ -16,6 +16,7 @@ app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
 @app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html', title="Lance, Joe, Hamdia", url=os.getenv("URL"))
 @app.route('/health')
