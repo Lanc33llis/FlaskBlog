@@ -1,5 +1,6 @@
 :root {
     --blue: #1C539F;
+    --yellow: #ffb300;
 }
 
 p, a, button {
@@ -45,6 +46,18 @@ body {
 
 .flex.down {
     flex-direction: column;
+}
+
+.fill {
+  height: 100%;
+}
+
+a {
+  transition: .25s color
+}
+
+a:hover {
+  color: var(--yellow);
 }
 
 .nav-bar {
@@ -116,6 +129,14 @@ body {
     cursor: pointer;
 }
 
+form.login * {
+  margin: 15px 0;
+}
+
+form.login p {
+  color: red;
+}
+
 #side {
     position: absolute;
     height: 100%;
@@ -150,7 +171,6 @@ body {
     background-color: var(--blue);
 }
 
-<<<<<<< HEAD
 .banner .title {
     color: white;
     font-size: 50px;
@@ -580,7 +600,7 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
     margin-top: 32px;
     width: 100%
   }  
-=======
+}
 @media (max-width: 1250px) {
     .nav-content:not(.flex.down) a{
         visibility: hidden;
@@ -614,5 +634,3 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
     .home-page h2 {
         font-size: 30px;
     }
->>>>>>> 7afb91286b08d1f72f8c0d2cd80e68d635ab7df0
-}

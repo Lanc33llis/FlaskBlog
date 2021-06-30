@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+<div class="fill header-margin flex down">
+    <form action="/login" method="post" class="flex grow center down login">
+        <p style="color: var(--yellow)">
+            {{reserveText}}
+        </p>
+        <input name="username" placeholder="Username">
+        <input name="password" placeholder="Password">
+        <p>
+            {{error}}
+        </p>
+        <input type="submit" value="Login">
+        <a href="/register">New? Register here!</a>
+    </form>
+
+</div>
+{% endblock %}
