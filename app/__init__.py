@@ -93,6 +93,7 @@ def login():
             error = 'Incorrect password.'
 
         if error is not None:
+            print(url_for('login', error=error))
             return redirect(url_for('login', error=error))
         else:
             return redirect(url_for('blog'))
