@@ -49,7 +49,7 @@ def register():
             error = request.args['error']
         else:
             error = ""
-        return render_template('register.html', title="Register", error=error)
+        return render_template('register.html', title="Register", error=error, url=os.getenv("URL"))
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -80,7 +80,7 @@ def login():
             error = request.args['error']
         else:
             error = ""
-        return render_template('login.html', title="Login", error=error, reserveText = reserveText)
+        return render_template('login.html', title="Login", error=error, reserveText = reserveText, url=os.getenv("URL"))
     elif request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
