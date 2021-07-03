@@ -7,11 +7,11 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug.utils import redirect
-from werkzeug.middleware.proxy_fix import ProxyFix
+
 
 load_dotenv()
 app = Flask(__name__)
-app = ProxyFix(app, x_for=1, x_host=1)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
     user=os.getenv('POSTGRES_USER'),
     passwd=os.getenv('POSTGRES_PASSWORD'),
