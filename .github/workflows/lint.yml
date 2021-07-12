@@ -15,18 +15,17 @@ jobs:
     steps:
       - name: Check out git repository
         uses: actions/checkout@v2\
-      
+
       - name: Set up python
         uses: actions/setup-python@v1
         with:
           python-version: 3.9
-        
-        - name: Install Python dependencies
-          run: pip install black flake8
-        
-        - name: Run linters
-          uses: wearerrequired/lint-action@v1
-          with:
-              black: true
-              flake8: true
-          
+
+      - name: Install Python dependencies
+        run: pip install black flake8
+
+      - name: Run linters
+        uses: wearerrequired/lint-action@v1
+        with:
+          black: true
+          flake8: true
